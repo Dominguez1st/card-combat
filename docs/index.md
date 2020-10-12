@@ -27,13 +27,13 @@ for AI for the user created challenge quests, and export their created decks and
 			* Red cards deal 1.5 times damage
 			* Blue cards deal 1 times damage and build up the unit's magic gauge. 
 			* Green cards deal 0.8 times damage and generate stars that increase the odds of a critical hit for other cards durning the next turn.
-		* The unit cards have stats on them (i.e. _HP_, _ATK_, and _CRIT CHANCE_) and active abilities on them (i.e. _Heal_) 
+		* The unit cards have stats on them (i.e. _HP_, _ATK_, and _CRITICAL CHANCE_) and active abilities on them (i.e. _Heal_) 
 			* The user may also choose certain active abilities for the units though this may be subject to change.
 			* The units have a sort of Rock Paper Scissors style of effectiveness against each other.
 		
 * Play games against the computer with their created decks.
-	* The game starts with the user's 3 unit cards being placed on the field.
-	* At the start of the user's turn, the user then draws 5 cards from their deck and any crit stars are distributed to the attack cards.
+	* The game starts with the user's 3 unit cards placed on the field.
+	* At the start of the user's turn, the user then draws 5 cards from their deck and any critical stars are distributed to the attack cards.
 	* The user then can choose to either activate the unit cards' active abilities or enter the attack phase.
 	* In the attack phase the user chooses 3 cards of the 5 to attack the computer with and discards the other two.
 		* (Note: Once the deck has been emptied, the played cards and the discarded cards are shuffled together and form another deck to draw from again.)
