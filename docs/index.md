@@ -71,9 +71,13 @@ for AI for the user created challenge quests, and export their created decks and
 
 * [Zxing](https://github.com/zxing/zxing)
 	* A library that will generate QRCodes that will contain information that will create a deck.
+	  
+	    * The app will be able to run without Zxing but will lose the QR code functionality.
 
 * [QRCode Scanner](https://developers.google.com/ml-kit/vision/barcode-scanning/android)
 	* A library that will allow the camera to read QRCodes.
+     
+        * The app will be able to run without QRCode Scanner but will lose the QR code functionality.
 
 ## Stretch goals/possible enhancements 
 
