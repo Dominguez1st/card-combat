@@ -89,4 +89,4 @@ for AI for the user created challenge quests, and export their created decks and
 
 ## Entity-Relationship Diagram
 
-[![ERD](img/Card%20Combat%20ERD%20Mk3.png)](pdf/Card%20Combat%20ERD%20Mk3.pdf "Click for PDF")
+[Entity-Relationship Diagram](erd.md)
