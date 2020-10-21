@@ -86,3 +86,7 @@ for AI for the user created challenge quests, and export their created decks and
 ## Wireframe
 
 ![Project Card Combat Wireframe](img/Project Card Combat Wireframe.png)
+
+## Entity-Relationship Diagram
+
+* [ERD](img/Card%20Combat%20ERD%20Mk3.png)
