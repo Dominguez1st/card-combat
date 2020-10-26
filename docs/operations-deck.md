@@ -35,21 +35,38 @@ For any queries (i.e. selecting from the database) that you think you will need 
 
 Copy and paste the section below as many times as necessary, for all of the queries you currently anticipate implementing for this entity.
 
-### Query: {Replace this placeholder with a simple label for the query---e.g. "All favorites".}
+### Query: Deck for game.
 
 Purpose
 
-: {Replace this placeholder---but not the colon character and the space that precede the placeholder---with a sentence or two summarizing the purpose of the query.}
+: To grab a deck by id.
 
 Cardinality/modality
 
-: {Replace this placeholder---but not the colon character and the space that precede the placeholder---with the expected query cardinality & modality. Cardinality should be either "one" or "many", and modality should be either "required" or "optional". For example, a query intended to return all scores of a game has a cardinality/modality combination of "many/optional".}
+: One/Required
  
 Filter
 
-: {Replace this placeholder---but not the colon character and the space that precede the placeholder---with the list of fields of the entity that will be used to filter the query. For example, if this is a `Comment` entity, with a `posted` field that holds the date a comment was recorded, and you intend to include a query that shows only the last 30 days of comments, you would filter on that `posted` field.}
+: Will filter by deck id.
  
 Sort order
 
-: {Replace this placeholder---but not the colon character and the space that precede the placeholder---with the list of fields of the entity that will be used to sort the query, along with an indicator of ascending or descending order. For example, if the entity is `Task` in a to-do list application, and `Task` has a `dueDate` field, you might want to say "dueDate, ascending".}
+: No sort order required.
 
+### Query: Deck by user.
+
+Purpose
+
+: To grab a deck by user.
+
+Cardinality/modality
+
+: Many/Optional
+ 
+Filter
+
+: Will filter by user id.
+ 
+Sort order
+
+: The alphabetical name. ASC
