@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.cardcombat.model.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
@@ -9,19 +10,27 @@ import java.util.UUID;
 @Entity
 public class AttackCard {
 
+  @NonNull
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "attack_card_id")
   private UUID id;
 
+  @NonNull
   @ForeignKey(entity = UnitCard.class, parentColumns = "unit_card_id", childColumns = "unit_card_id")
+  @ColumnInfo
   private UUID unitCardId;
 
+  @NonNull
+  @ColumnInfo
   private String type;
 
+  @ColumnInfo
   private double damage;
 
+  @ColumnInfo
   private int magicGeneration;
 
+  @ColumnInfo
   private int criticalChance;
 
   public UUID getUnitCardId() {
