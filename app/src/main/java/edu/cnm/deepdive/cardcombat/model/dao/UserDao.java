@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.cardcombat.model.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -42,6 +43,6 @@ public interface UserDao {
   Single<Integer> delete(Collection<User> users);
 
   @Query("SELECT * FROM User WHERE user_id = :id")
-  List<User> findByUserId(int id);
+  LiveData<User> findByUserId(int id);
 
 }

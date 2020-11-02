@@ -42,5 +42,9 @@ public interface UnitCardDao {
   Single<Integer> delete(Collection<UnitCard> unitCards);
 
   @Query("SELECT * FROM UnitCard WHERE unit_card_id = :id")
-  List<UnitCard> findByUnitCardId(int id);
+  LiveData<UnitCard> findByUnitCardId(int id);
+
+  @Query("SELECT * FROM UnitCard WHERE deck_id = :id")
+  LiveData<List<UnitCard>> findByDeckId(int id);
+
 }

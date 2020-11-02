@@ -3,25 +3,46 @@ package edu.cnm.deepdive.cardcombat.model.entity;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(
+    foreignKeys = {
+        @ForeignKey(
+            entity = User.class,
+            parentColumns = "user_id",
+            childColumns = "user_id"
+        ),
+        @ForeignKey(
+            entity = Deck.class,
+            parentColumns = "deck_id",
+            childColumns = "player_deck_id"
+        ),
+        @ForeignKey(
+            entity = Deck.class,
+            parentColumns = "deck_id",
+            childColumns = "computer_deck_id"
+        )
+    },
+    indices = {
+        @Index(value = {"user_id"}, unique = true),
+        @Index(value = {"player_deck_id"}, unique = true),
+        @Index(value = {"computer_deck_id"}, unique = true)
+    }
+)
 public class Game {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "game_id")
   private long id;
 
-  @ForeignKey(entity = User.class, parentColumns = "user_id", childColumns = "user_id")
-  @ColumnInfo
+  @ColumnInfo(name = "user_id")
   private long userId;
 
-  @ForeignKey(entity = Deck.class, parentColumns = "deck_id", childColumns = "player_deck_id")
-  @ColumnInfo
+  @ColumnInfo(name = "player_deck_id")
   private long playerDeckId;
 
-  @ForeignKey(entity = Deck.class, parentColumns = "deck_id", childColumns = "computer_deck_id")
-  @ColumnInfo
+  @ColumnInfo(name = "computer_deck_id")
   private long computerDeckId;
 
   @ColumnInfo(name = "is_player_units_alive")
@@ -31,10 +52,10 @@ public class Game {
   private boolean isComputerUnitsAlive;
 
   @ColumnInfo(name = "player_critical_chance")
-  private boolean playerCriticalChance;
+  private int playerCriticalChance;
 
   @ColumnInfo(name = "computer_critical_chance")
-  private boolean computerCriticalChance;
+  private int computerCriticalChance;
 
   public long getId() {
     return id;
@@ -84,19 +105,19 @@ public class Game {
     isComputerUnitsAlive = computerUnitsAlive;
   }
 
-  public boolean isPlayerCriticalChance() {
+  public int getPlayerCriticalChance() {
     return playerCriticalChance;
   }
 
-  public void setPlayerCriticalChance(boolean playerCriticalChance) {
+  public void setPlayerCriticalChance(int playerCriticalChance) {
     this.playerCriticalChance = playerCriticalChance;
   }
 
-  public boolean isComputerCriticalChance() {
+  public int getComputerCriticalChance() {
     return computerCriticalChance;
   }
 
-  public void setComputerCriticalChance(boolean computerCriticalChance) {
+  public void setComputerCriticalChance(int computerCriticalChance) {
     this.computerCriticalChance = computerCriticalChance;
   }
 }

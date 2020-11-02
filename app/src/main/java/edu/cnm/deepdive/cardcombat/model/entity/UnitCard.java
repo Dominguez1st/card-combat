@@ -4,17 +4,30 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
+import edu.cnm.deepdive.cardcombat.model.entity.AttackCard.Type;
 
-@Entity
+@Entity(
+    foreignKeys = {
+        @ForeignKey(
+            entity = Deck.class,
+            parentColumns = "deck_id",
+            childColumns = "deck_id"
+        )
+    },
+    indices = {
+        @Index(value = {"deck_id"}, unique = true)
+    }
+)
 public class UnitCard {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "unit_card_id")
   private long id;
 
-  @ForeignKey(entity = Deck.class, parentColumns = "deck_id", childColumns = "deck_id")
-  @ColumnInfo
+  @ColumnInfo(name = "deck_id")
   private long deckId;
 
   @NonNull
@@ -72,5 +85,17 @@ public class UnitCard {
 
   public enum Unit{
     SWORDMASTER, MARKSMAN, DRAGOON, CHARIOTEER, WIZARD, ASSASSIN, BERSERKER;
+
+    @TypeConverter
+    public static Integer unitToInteger(Unit value) {
+      return (value != null) ? value.ordinal() : null;
+    }
+
+    @TypeConverter
+    public static Unit integerToUnit(Integer value) {
+      return (value != null) ? Unit.values()[value] : null;
+    }
+
+
   }
 }

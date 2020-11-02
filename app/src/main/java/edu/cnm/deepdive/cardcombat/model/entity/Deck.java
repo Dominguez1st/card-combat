@@ -4,17 +4,28 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(
+    foreignKeys = {
+        @ForeignKey(
+            entity = User.class,
+            parentColumns = "user_id",
+            childColumns = "user_id"
+        )
+    },
+    indices = {
+        @Index(value = {"user_id"}, unique = true)
+    }
+)
 public class Deck {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "deck_id")
   private long id;
 
-  @ForeignKey(entity = User.class, parentColumns = "user_id", childColumns = "user_id")
-  @ColumnInfo
+  @ColumnInfo(name = "user_id")
   private long userId;
 
   @NonNull

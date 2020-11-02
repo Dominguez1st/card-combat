@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.cardcombat.model.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -42,7 +43,9 @@ public interface DeckDao {
   Single<Integer> delete(Collection<Deck> decks);
 
   @Query("SELECT * FROM Deck WHERE deck_id = :id")
-  List<Deck> findByDeckId(int id);
+  LiveData<Deck> findByDeckId(int id);
+
+
 
 
 }
