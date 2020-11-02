@@ -4,29 +4,32 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import java.util.UUID;
 
 @Entity
 public class User {
 
-  @NonNull
   @PrimaryKey
   @ColumnInfo(name = "user_id")
-  private UUID id;
+  private long id;
 
   @NonNull
-  @ColumnInfo
+  @ColumnInfo(name = "oauthKey")
   private String oauthKey;
 
-  public UUID getId() {
+  public long getId() {
     return id;
   }
 
+  public void setId(long id) {
+    this.id = id;
+  }
+
+  @NonNull
   public String getOauthKey() {
     return oauthKey;
   }
 
-  public void setOauthKey(String oauthKey) {
+  public void setOauthKey(@NonNull String oauthKey) {
     this.oauthKey = oauthKey;
   }
 }

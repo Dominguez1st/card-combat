@@ -5,67 +5,59 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
-import java.util.UUID;
+import androidx.room.TypeConverter;
 
 @Entity
 public class AttackCard {
 
-  @NonNull
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "attack_card_id")
-  private UUID id;
+  private long id;
 
-  @NonNull
   @ForeignKey(entity = UnitCard.class, parentColumns = "unit_card_id", childColumns = "unit_card_id")
   @ColumnInfo
-  private UUID unitCardId;
+  private long unitCardId;
 
   @NonNull
   @ColumnInfo
-  private String type;
+  private Type type;
 
-  @ColumnInfo
-  private double damage;
-
-  @ColumnInfo
-  private int magicGeneration;
-
-  @ColumnInfo
-  private int criticalChance;
-
-  public UUID getUnitCardId() {
+  public long getId() {
     return id;
   }
 
-  public String getType() {
+  public void setId(long id) {
+    this.id = id;
+  }
+
+  public long getUnitCardId() {
+    return unitCardId;
+  }
+
+  public void setUnitCardId(long unitCardId) {
+    this.unitCardId = unitCardId;
+  }
+
+  @NonNull
+  public Type getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@NonNull Type type) {
     this.type = type;
   }
 
-  public double getDamage() {
-    return damage;
-  }
+  public enum Type {
+    RED, BLUE, GREEN;
 
-  public void setDamage(int damage) {
-    this.damage = damage;
-  }
+    @TypeConverter
+    public static Integer typeToInteger(Type value) {
+      return (value != null) ? value.ordinal() : null;
+    }
 
-  public int getMagicGeneration() {
-    return magicGeneration;
-  }
-
-  public void setMagicGeneration(int magicGeneration) {
-    this.magicGeneration = magicGeneration;
-  }
-
-  public int getCriticalChance() {
-    return criticalChance;
-  }
-
-  public void setCriticalChance(int criticalChance) {
-    this.criticalChance = criticalChance;
+    @TypeConverter
+    public static Type integerToType(Integer value) {
+      return (value != null) ? Type.values()[value] : null;
+    }
   }
 }

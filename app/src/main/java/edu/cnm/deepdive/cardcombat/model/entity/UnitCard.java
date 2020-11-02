@@ -5,78 +5,72 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
-import java.util.UUID;
+
 @Entity
 public class UnitCard {
 
-  @NonNull
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "unit_card_id")
-  private UUID id;
+  private long id;
 
-  @NonNull
   @ForeignKey(entity = Deck.class, parentColumns = "deck_id", childColumns = "deck_id")
   @ColumnInfo
-  private UUID deckId;
+  private long deckId;
 
   @NonNull
   @ColumnInfo
-  private String cardClass;
-
-  @ColumnInfo
-  private int damage;
+  private Unit unit;
 
   @NonNull
-  @ColumnInfo
-  private String abilities;
+  @ColumnInfo(name = "current_hit_points")
+  private int currentHitPoints;
 
-  @ColumnInfo
-  private int hitPoints;
+  @NonNull
+  @ColumnInfo(name = "magic_hit_points")
+  private int currentMagicPoints;
 
-  @ColumnInfo
-  private int magicPoints;
-
-  public UUID getId() {
+  public long getId() {
     return id;
   }
 
-  public String getCardClass() {
-    return cardClass;
+  public void setId(long id) {
+    this.id = id;
   }
 
-  public void setCardClass(String cardClass) {
-    this.cardClass = cardClass;
+  public long getDeckId() {
+    return deckId;
   }
 
-  public int getDamage() {
-    return damage;
+  public void setDeckId(long deckId) {
+    this.deckId = deckId;
   }
 
-  public void setDamage(int damage) {
-    this.damage = damage;
+  @NonNull
+  public Unit getUnit() {
+    return unit;
   }
 
-  public String getAbilities() {
-    return abilities;
+  public void setUnit(@NonNull Unit unit) {
+    this.unit = unit;
   }
 
-  public void setAbilities(String abilities) {
-    this.abilities = abilities;
+  public int getCurrentHitPoints() {
+    return currentHitPoints;
   }
 
-  public int getHitPoints() {
-    return hitPoints;
+  public void setCurrentHitPoints(int currentHitPoints) {
+    this.currentHitPoints = currentHitPoints;
   }
 
-  public void setHitPoints(int hitPoints) {
-    this.hitPoints = hitPoints;
+  public int getCurrentMagicPoints() {
+    return currentMagicPoints;
   }
 
-  public int getMagicPoints() {
-    return magicPoints;
+  public void setCurrentMagicPoints(int currentMagicPoints) {
+    this.currentMagicPoints = currentMagicPoints;
   }
 
-  public void setMagicPoints(int magicPoints) {
-    this.magicPoints = magicPoints;
+  public enum Unit{
+    SWORDMASTER, MARKSMAN, DRAGOON, CHARIOTEER, WIZARD, ASSASSIN, BERSERKER;
   }
 }

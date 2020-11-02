@@ -2,47 +2,58 @@ package edu.cnm.deepdive.cardcombat.model.entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
+import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
-import java.util.UUID;
 
+@Entity
 public class Deck {
 
-  @NonNull
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "deck_id")
-  private UUID id;
+  private long id;
 
-  @NonNull
   @ForeignKey(entity = User.class, parentColumns = "user_id", childColumns = "user_id")
   @ColumnInfo
-  private UUID userId;
+  private long userId;
 
   @NonNull
-  @ColumnInfo
   private String name;
 
   @NonNull
-  @ColumnInfo
   private String qrCode;
 
-  public UUID getId() {
+  public long getId() {
     return id;
   }
 
+  public void setId(long id) {
+    this.id = id;
+  }
+
+  public long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(long userId) {
+    this.userId = userId;
+  }
+
+  @NonNull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@NonNull String name) {
     this.name = name;
   }
 
+  @NonNull
   public String getQrCode() {
     return qrCode;
   }
 
-  public void setQrCode(String qrCode) {
+  public void setQrCode(@NonNull String qrCode) {
     this.qrCode = qrCode;
   }
 }
