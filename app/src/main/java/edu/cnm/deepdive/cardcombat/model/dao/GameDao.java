@@ -25,7 +25,7 @@ public interface GameDao {
   Single<List<Long>> insert(Collection<Game> games);
 
   @Update
-  Single<Integer> updates(Game game);
+  Single<Integer> update(Game game);
 
   @Update
   Single<Integer> update(Game... games);

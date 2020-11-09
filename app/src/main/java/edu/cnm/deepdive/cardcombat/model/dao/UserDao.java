@@ -43,6 +43,6 @@ public interface UserDao {
   Single<Integer> delete(Collection<User> users);
 
   @Query("SELECT * FROM User WHERE user_id = :id")
-  LiveData<User> findByUserId(int id);
+  LiveData<User> findByUserId(long id);
 
 }
