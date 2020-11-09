@@ -43,7 +43,7 @@ public interface DeckDao {
   Single<Integer> delete(Collection<Deck> decks);
 
   @Query("SELECT * FROM Deck WHERE deck_id = :id")
-  LiveData<Deck> findByDeckId(int id);
+  LiveData<Deck> findByDeckId(long id);
 
 
 

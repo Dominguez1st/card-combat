@@ -43,10 +43,10 @@ public interface GameDao {
   Single<Integer> delete(Collection<Game> games);
 
   @Query("SELECT * FROM Game WHERE game_id = :id")
-  LiveData<Game> findByGameId(int id);
+  LiveData<Game> findByGameId(long id);
 
   @Query("SELECT * FROM Game WHERE player_deck_id = :id")
-  LiveData<List<Game>> findByPlayerDeckId(int id);
+  LiveData<List<Game>> findByPlayerDeckId(long id);
 
 
 }
