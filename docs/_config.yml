@@ -13,3 +13,4 @@ description: "A quick, fun, PvE card game"
 author:
   name: "Robert Dominguez"
   
+theme: jekyll-theme-dinky
