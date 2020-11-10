@@ -1,5 +1,5 @@
 ## Wireframe
 
-[![ERD](img/Project%20Card%20Combat%20Wireframe.png)](pdf/Project%20Card%20Combat%20Wireframe.pdf "Click for PDF")
+[![ERD](img/project-card-combat-wireframe.png)](pdf/project-card-combat-wireframe.pdf "Click for PDF")
 
-[Return](index.md)
+[*Return to previous page*](index.md)

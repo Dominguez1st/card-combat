@@ -94,3 +94,7 @@ for AI for the user created challenge quests, and export their created decks and
 ## Entity-Relationship Diagram
 
 * [Project Card Combat Entity-Relationship Diagram](erd.md)
+
+## Data Model Implementation
+
+* [Project Card Combat Data Model Implementation](data-model-implementation.md)
