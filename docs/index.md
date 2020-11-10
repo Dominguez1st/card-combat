@@ -55,9 +55,6 @@ for AI for the user created challenge quests, and export their created decks and
 * User created AI Computer settings.
 
 * Information about which challenges the user has completed.
-
-* Settings.
-	* Sound Settings
     
 ## Device/external services
 
