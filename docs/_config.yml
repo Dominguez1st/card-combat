@@ -1,6 +1,6 @@
 remote_theme: chrisbobbe/jekyll-theme-prologue
 
-collections: [docs]
+collections: [sections]
 
 repository_links:
   enabled: false
