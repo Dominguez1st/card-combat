@@ -89,12 +89,12 @@ for AI for the user created challenge quests, and export their created decks and
 
 ## Wireframe
 
-* [Project Card Combat Wireframe](wireframe.md)
+* [Project Card Combat Wireframe](../wireframe.md)
 
 ## Entity-Relationship Diagram
 
-* [Project Card Combat Entity-Relationship Diagram](erd.md)
+* [Project Card Combat Entity-Relationship Diagram](../erd.md)
 
 ## Data Model Implementation
 
-* [Project Card Combat Data Model Implementation](data-model-implementation.md)
+* [Project Card Combat Data Model Implementation](../data-model-implementation.md)

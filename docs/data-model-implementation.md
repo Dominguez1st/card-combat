@@ -40,4 +40,4 @@
 
 * [DDL](ddl.md)
 
-[*Return to previous page*](index.md)
+[*Return to previous page*](sections/index.md)
