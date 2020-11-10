@@ -1,4 +1,4 @@
-remote_theme: poole/hyde
+remote_theme: ddc-java/ddc-day
 repository_links:
   enabled: false
 page_navigator:
