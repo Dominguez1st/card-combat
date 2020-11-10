@@ -1,4 +1,7 @@
-remote_theme: ddc-java/ddc-day
+remote_theme: chrisbobbe/jekyll-theme-prologue
+
+collections: [docs]
+
 repository_links:
   enabled: false
 page_navigator:

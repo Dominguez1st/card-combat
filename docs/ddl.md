@@ -1,4 +1,4 @@
-#Data Definition Language (DDL) 
+# Data Definition Language (DDL) 
 ```
 CREATE TABLE IF NOT EXISTS `AttackCard`
 (
