@@ -15,5 +15,6 @@ public class CardCombatApplication extends Application {
     CardCombatDatabase.getInstance().getGameDao().delete()
         .subscribeOn(Schedulers.io())
         .subscribe();
+    GoogleSignService.setContext(this);
   }
 }
