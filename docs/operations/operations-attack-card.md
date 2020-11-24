@@ -35,11 +35,11 @@ For any queries (i.e. selecting from the database) that you think you will need 
 
 Copy and paste the section below as many times as necessary, for all of the queries you currently anticipate implementing for this entity.
 
-### Query: Unit card's attack
+### Query: Unit card's attackType
 
 Purpose
 
-: To grab attack cards for the unit cards.
+: To grab attackType cards for the unit cards.
 
 Cardinality/modality
 
@@ -47,7 +47,7 @@ Cardinality/modality
  
 Filter
 
-: Will be filtered by the attack card id.  
+: Will be filtered by the attackType card id.  
  
 Sort order
 

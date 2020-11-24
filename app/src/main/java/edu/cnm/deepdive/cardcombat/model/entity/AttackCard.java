@@ -6,7 +6,7 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
-import androidx.room.TypeConverter;
+import edu.cnm.deepdive.cardcombat.model.type.AttackType;
 
 @Entity(
     foreignKeys = {
@@ -31,7 +31,7 @@ public class AttackCard {
 
   @NonNull
   @ColumnInfo
-  private Type type;
+  private AttackType attackType;
 
   public long getId() {
     return id;
@@ -50,25 +50,12 @@ public class AttackCard {
   }
 
   @NonNull
-  public Type getType() {
-    return type;
+  public AttackType getAttackType() {
+    return attackType;
   }
 
-  public void setType(@NonNull Type type) {
-    this.type = type;
+  public void setAttackType(@NonNull AttackType attackType) {
+    this.attackType = attackType;
   }
 
-  public enum Type {
-    RED, BLUE, GREEN;
-
-    @TypeConverter
-    public static Integer typeToInteger(Type value) {
-      return (value != null) ? value.ordinal() : null;
-    }
-
-    @TypeConverter
-    public static Type integerToType(Integer value) {
-      return (value != null) ? Type.values()[value] : null;
-    }
-  }
 }

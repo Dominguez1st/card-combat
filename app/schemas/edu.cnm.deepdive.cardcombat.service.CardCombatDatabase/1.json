@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "08efe68648a6e2aa98bb0f6c12fed1e9",
+    "identityHash": "67f126beb37f27cf6164eeb13aa80b20",
     "entities": [
       {
         "tableName": "AttackCard",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`attack_card_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `unit_card_id` INTEGER NOT NULL, `type` INTEGER NOT NULL, FOREIGN KEY(`unit_card_id`) REFERENCES `UnitCard`(`unit_card_id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`attack_card_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `unit_card_id` INTEGER NOT NULL, `attackType` INTEGER NOT NULL, FOREIGN KEY(`unit_card_id`) REFERENCES `UnitCard`(`unit_card_id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
         "fields": [
           {
             "fieldPath": "id",
@@ -21,8 +21,8 @@
             "notNull": true
           },
           {
-            "fieldPath": "type",
-            "columnName": "type",
+            "fieldPath": "attackType",
+            "columnName": "attackType",
             "affinity": "INTEGER",
             "notNull": true
           }
@@ -332,7 +332,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '08efe68648a6e2aa98bb0f6c12fed1e9')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '67f126beb37f27cf6164eeb13aa80b20')"
     ]
   }
 }
