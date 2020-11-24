@@ -9,19 +9,44 @@
   <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Hello World!"
+    android:text="Card Combat Main Screen"
+    app:layout_constraintVertical_bias=".25"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toTopOf="parent"/>
 
   <Button
-    android:id="@+id/play_button"
+    android:id="@+id/nav_to_battle_options_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    app:layout_constraintVertical_bias=".5"
+    app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     android:text="Play"/>
+
+  <Button
+    android:id="@+id/nav_to_editor_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintVertical_bias=".625"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:text="Edit/Create Decks"/>
+
+  <Button
+    android:id="@+id/nav_to_qr_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintVertical_bias=".75"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:text="Scan Qr Codes"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

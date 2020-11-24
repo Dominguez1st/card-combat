@@ -7,7 +7,7 @@
   <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Battle Options Screen"
+    android:text="Deck Editor Screen"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -26,14 +26,27 @@
     android:text="Return"/>
 
   <Button
-    android:id="@+id/nav_to_battle_button"
+    android:id="@+id/save_deck_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:layout_constraintVertical_bias=".80"
+    app:layout_constraintVertical_bias=".9"
+    app:layout_constraintHorizontal_bias=".20"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    android:text="Play"/>
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:text="Save Deck"/>
+
+  <Button
+  android:id="@+id/generate_code_button"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  app:layout_constraintVertical_bias=".9"
+  app:layout_constraintHorizontal_bias=".80"
+  app:layout_constraintTop_toTopOf="parent"
+  app:layout_constraintBottom_toBottomOf="parent"
+  app:layout_constraintStart_toStartOf="parent"
+  app:layout_constraintEnd_toEndOf="parent"
+  android:text="Generate Qr Code"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
