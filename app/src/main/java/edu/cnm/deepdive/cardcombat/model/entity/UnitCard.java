@@ -6,8 +6,7 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
-import androidx.room.TypeConverter;
-import edu.cnm.deepdive.cardcombat.model.entity.AttackCard.Type;
+import edu.cnm.deepdive.cardcombat.model.type.Unit;
 
 @Entity(
     foreignKeys = {
@@ -81,21 +80,5 @@ public class UnitCard {
 
   public void setCurrentMagicPoints(int currentMagicPoints) {
     this.currentMagicPoints = currentMagicPoints;
-  }
-
-  public enum Unit{
-    SWORDMASTER, MARKSMAN, DRAGOON, CHARIOTEER, WIZARD, ASSASSIN, BERSERKER;
-
-    @TypeConverter
-    public static Integer unitToInteger(Unit value) {
-      return (value != null) ? value.ordinal() : null;
-    }
-
-    @TypeConverter
-    public static Unit integerToUnit(Integer value) {
-      return (value != null) ? Unit.values()[value] : null;
-    }
-
-
   }
 }

@@ -16,12 +16,13 @@ import edu.cnm.deepdive.cardcombat.model.entity.Deck;
 import edu.cnm.deepdive.cardcombat.model.entity.Game;
 import edu.cnm.deepdive.cardcombat.model.entity.UnitCard;
 import edu.cnm.deepdive.cardcombat.model.entity.User;
+import edu.cnm.deepdive.cardcombat.model.type.Unit;
 import edu.cnm.deepdive.cardcombat.service.CardCombatDatabase.Converters;
 import java.nio.ByteBuffer;
 import java.util.UUID;
 
 @Database(entities = {AttackCard.class, Deck.class, Game.class, UnitCard.class, User.class}, version = 1, exportSchema = true)
-@TypeConverters(value = {Converters.class, AttackCard.Type.class, UnitCard.Unit.class})
+@TypeConverters(value = {Converters.class, AttackCard.Type.class, Unit.class})
 public abstract class CardCombatDatabase extends RoomDatabase {
 
   private static final String DB_NAME = "card_combat_db";
