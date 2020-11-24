@@ -1,14 +1,18 @@
 package edu.cnm.deepdive.cardcombat.service;
 
 import android.content.Context;
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import edu.cnm.deepdive.cardcombat.model.dao.DeckDao;
 import edu.cnm.deepdive.cardcombat.model.dao.GameDao;
 import edu.cnm.deepdive.cardcombat.model.dao.UserDao;
 import edu.cnm.deepdive.cardcombat.model.entity.Deck;
 import edu.cnm.deepdive.cardcombat.model.entity.User;
 import io.reactivex.Completable;
+import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
+import java.util.Date;
 
 public class UserRepository {
 
@@ -16,6 +20,8 @@ public class UserRepository {
   private final DeckDao deckDao;
   private final UserDao userDao;
   private final GameDao gameDao;
+  private final GoogleSignInService signInService;
+
 
   public UserRepository(Context context) {
     this.context = context;
@@ -23,7 +29,28 @@ public class UserRepository {
     deckDao = database.getDeckDao();
     userDao = database.getUserDao();
     gameDao = database.getGameDao();
+    signInService = GoogleSignInService.getInstance();
   }
+
+  @SuppressWarnings("ConstantConditions")
+  public Single<User> createUser(@NonNull GoogleSignInAccount account) {
+    return Single.fromCallable(() -> {
+      User user = new User();
+      user.setOauthKey(account.getId());
+      return user;
+    })
+        .flatMap((user) ->
+            userDao.insert(user)
+                .map((id) -> {
+                  if (id > 0) {
+                    user.setId(id);
+                  }
+                  return user;
+                })
+        )
+        .subscribeOn(Schedulers.io());
+  }
+
 
   public Completable save(User user){
     return ((user.getId() == 0)
