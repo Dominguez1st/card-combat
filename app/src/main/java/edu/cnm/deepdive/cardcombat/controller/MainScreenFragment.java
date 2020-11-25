@@ -46,6 +46,18 @@ public class MainScreenFragment extends Fragment {
         Navigation.findNavController(getView()).navigate(R.id.action_mainScreenFragment_to_battleOptionsFragment);
       }
     });
+    binding.navToEditorButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Navigation.findNavController(getView()).navigate(R.id.action_mainScreenFragment_to_deckEditorFragment);
+      }
+    });
+    binding.navToQrButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Navigation.findNavController(getView()).navigate(R.id.action_mainScreenFragment_to_qrCodeFragment);
+      }
+    });
     return binding.getRoot();
   }
 

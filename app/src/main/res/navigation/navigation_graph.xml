@@ -12,6 +12,12 @@
     <action
       android:id="@+id/action_mainScreenFragment_to_battleOptionsFragment"
       app:destination="@id/battleOptionsFragment"/>
+    <action
+      android:id="@+id/action_mainScreenFragment_to_deckEditorFragment"
+      app:destination="@id/deckEditorFragment"/>
+    <action
+      android:id="@+id/action_mainScreenFragment_to_qrCodeFragment"
+      app:destination="@id/qrCodeFragment"/>
   </fragment>
 
   <fragment
@@ -20,9 +26,32 @@
     android:label="BattleOptionsFragment">
     <action
       android:id="@+id/from_battle_options_to_main_screen"
-      app:destination="@+id/mainScreenFragment"
+      app:destination="@+id/mainScreenFragment"/>
+    <action
+      android:id="@+id/action_battleOptionsFragment_to_battleFragment"
+      app:destination="@id/battleFragment"/>
+  </fragment>
 
-      />
+  <fragment
+    android:id="@+id/battleFragment"
+    android:name="edu.cnm.deepdive.cardcombat.controller.BattleFragment"
+    android:label="BattleFragment"/>
+
+  <fragment
+    android:id="@+id/deckEditorFragment"
+    android:name="edu.cnm.deepdive.cardcombat.controller.DeckEditorFragment"
+    android:label="DeckEditorFragment">
+    <action
+      android:id="@+id/action_deckEditorFragment_to_mainScreenFragment"
+      app:destination="@id/mainScreenFragment"/>
+  </fragment>
+  <fragment
+    android:id="@+id/qrCodeFragment"
+    android:name="edu.cnm.deepdive.cardcombat.controller.QrCodeFragment"
+    android:label="QrCodeFragment">
+    <action
+      android:id="@+id/action_qrCodeFragment_to_mainScreenFragment"
+      app:destination="@id/mainScreenFragment"/>
   </fragment>
 
 </navigation>

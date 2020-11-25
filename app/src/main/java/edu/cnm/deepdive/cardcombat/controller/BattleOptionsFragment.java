@@ -43,6 +43,12 @@ public class BattleOptionsFragment extends Fragment {
         Navigation.findNavController(getView()).navigate(R.id.from_battle_options_to_main_screen);
       }
     });
+    binding.navToBattleButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Navigation.findNavController(getView()).navigate(R.id.action_battleOptionsFragment_to_battleFragment);
+      }
+    });
     return binding.getRoot();
   }
 

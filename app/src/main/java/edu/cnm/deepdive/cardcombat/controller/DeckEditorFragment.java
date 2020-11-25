@@ -3,10 +3,13 @@ package edu.cnm.deepdive.cardcombat.controller;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import edu.cnm.deepdive.cardcombat.R;
 import edu.cnm.deepdive.cardcombat.databinding.FragmentDeckEditorBinding;
 
 public class DeckEditorFragment extends Fragment {
@@ -34,6 +37,12 @@ public class DeckEditorFragment extends Fragment {
       @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
     binding = FragmentDeckEditorBinding.inflate(inflater);
     // Access references in binding to set contents of view objects, as appropriate
+    binding.navToMainButton.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Navigation.findNavController(getView()).navigate(R.id.action_deckEditorFragment_to_mainScreenFragment);
+      }
+    });
     return binding.getRoot();
   }
 
