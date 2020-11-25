@@ -5,19 +5,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import edu.cnm.deepdive.cardcombat.R;
-import edu.cnm.deepdive.cardcombat.databinding.FragmentBattleOptionsBinding;
+import edu.cnm.deepdive.cardcombat.databinding.FragmentMainScreenBinding;
 
-public class BattleOptionsFragment extends Fragment {
+public class MainScreenFragment extends Fragment {
 
-  private FragmentBattleOptionsBinding binding;
+  private FragmentMainScreenBinding binding;
 
-  public static BattleOptionsFragment createInstance(/* Parameters to pass to fragment */){
-    BattleOptionsFragment fragment = new BattleOptionsFragment();
+  private Button playButton;
+
+  public static MainScreenFragment createInstance(/* Parameters to pass to fragment */) {
+    MainScreenFragment fragment = new MainScreenFragment();
     Bundle args = new Bundle();
     // Add parameter values to args, using args.put???().
     fragment.setArguments(args);
@@ -35,12 +38,12 @@ public class BattleOptionsFragment extends Fragment {
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater,
       @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-    binding = FragmentBattleOptionsBinding.inflate(inflater);
+    binding = FragmentMainScreenBinding.inflate(inflater);
     // Access references in binding to set contents of view objects, as appropriate
-    binding.navToMainButton.setOnClickListener(new OnClickListener() {
+    binding.navToBattleOptionsButton.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
-        Navigation.findNavController(getView()).navigate(R.id.from_battle_options_to_main_screen);
+        Navigation.findNavController(getView()).navigate(R.id.action_mainScreenFragment_to_battleOptionsFragment);
       }
     });
     return binding.getRoot();

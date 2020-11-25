@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/navigation_graph"
+  app:startDestination="@id/mainScreenFragment">
+
+  <fragment
+    android:id="@+id/mainScreenFragment"
+    android:name="edu.cnm.deepdive.cardcombat.controller.MainScreenFragment"
+    android:label="MainScreenFragment">
+    <action
+      android:id="@+id/action_mainScreenFragment_to_battleOptionsFragment"
+      app:destination="@id/battleOptionsFragment"/>
+  </fragment>
+
+  <fragment
+    android:id="@+id/battleOptionsFragment"
+    android:name="edu.cnm.deepdive.cardcombat.controller.BattleOptionsFragment"
+    android:label="BattleOptionsFragment">
+    <action
+      android:id="@+id/from_battle_options_to_main_screen"
+      app:destination="@+id/mainScreenFragment"
+
+      />
+  </fragment>
+
+</navigation>
