@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.cardcombat.controller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import edu.cnm.deepdive.cardcombat.R;
 import edu.cnm.deepdive.cardcombat.databinding.FragmentMainScreenBinding;
+import edu.cnm.deepdive.cardcombat.service.GoogleSignInService;
 
 public class MainScreenFragment extends Fragment {
 
@@ -58,6 +60,12 @@ public class MainScreenFragment extends Fragment {
         Navigation.findNavController(getView()).navigate(R.id.action_mainScreenFragment_to_qrCodeFragment);
       }
     });
+    binding.signOutButton.setOnClickListener((v) -> GoogleSignInService.getInstance().signOut().addOnCompleteListener((ignore) -> {
+      Intent intent = new Intent(getContext(), LoginActivity.class)
+          .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+      startActivity(intent);
+    }));
+    binding.testName.setText(GoogleSignInService.getInstance().getAccount().getDisplayName());
     return binding.getRoot();
   }
 

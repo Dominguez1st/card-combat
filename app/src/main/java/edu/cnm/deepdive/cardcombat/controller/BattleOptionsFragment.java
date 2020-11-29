@@ -40,7 +40,7 @@ public class BattleOptionsFragment extends Fragment {
     binding.navToMainButton.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
-        Navigation.findNavController(getView()).navigate(R.id.from_battle_options_to_main_screen);
+        Navigation.findNavController(getView()).navigate(R.id.action_battleOptionsFragment_to_mainScreenFragment);
       }
     });
     binding.navToBattleButton.setOnClickListener(new OnClickListener() {

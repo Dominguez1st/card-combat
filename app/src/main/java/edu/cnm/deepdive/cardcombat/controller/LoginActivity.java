@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
 
   private void updateAndSwitch(GoogleSignInAccount account) {
     //noinspection ResultOfMethodCallIgnored
-    userRepository.createUser(account)
+    userRepository.getOrCreate(account)
         .subscribe(
             (user) -> {
               Intent intent = new Intent(this, NavigationActivity.class)

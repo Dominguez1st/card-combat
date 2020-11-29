@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "67f126beb37f27cf6164eeb13aa80b20",
+    "identityHash": "c9de22f0c54285a451a1aa1d97ecf213",
     "entities": [
       {
         "tableName": "AttackCard",
@@ -304,7 +304,7 @@
       },
       {
         "tableName": "User",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER NOT NULL, `oauth_Key` TEXT NOT NULL, PRIMARY KEY(`user_id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER NOT NULL, `oauth_key` TEXT NOT NULL, PRIMARY KEY(`user_id`))",
         "fields": [
           {
             "fieldPath": "id",
@@ -314,7 +314,7 @@
           },
           {
             "fieldPath": "oauthKey",
-            "columnName": "oauth_Key",
+            "columnName": "oauth_key",
             "affinity": "TEXT",
             "notNull": true
           }
@@ -332,7 +332,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '67f126beb37f27cf6164eeb13aa80b20')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c9de22f0c54285a451a1aa1d97ecf213')"
     ]
   }
 }

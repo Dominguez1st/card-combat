@@ -25,7 +25,7 @@
     android:name="edu.cnm.deepdive.cardcombat.controller.BattleOptionsFragment"
     android:label="BattleOptionsFragment">
     <action
-      android:id="@+id/from_battle_options_to_main_screen"
+      android:id="@+id/action_battleOptionsFragment_to_mainScreenFragment"
       app:destination="@+id/mainScreenFragment"/>
     <action
       android:id="@+id/action_battleOptionsFragment_to_battleFragment"

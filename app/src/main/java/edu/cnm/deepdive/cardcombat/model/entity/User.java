@@ -13,7 +13,7 @@ public class User {
   private long id;
 
   @NonNull
-  @ColumnInfo(name = "oauth_Key")
+  @ColumnInfo(name = "oauth_key")
   private String oauthKey;
 
   public long getId() {

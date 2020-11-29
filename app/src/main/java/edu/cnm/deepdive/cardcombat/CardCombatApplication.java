@@ -18,4 +18,5 @@ public class CardCombatApplication extends Application {
         .subscribeOn(Schedulers.io())
         .subscribe();
   }
+
 }

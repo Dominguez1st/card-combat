@@ -33,26 +33,23 @@ public class UserRepository {
   }
 
   @SuppressWarnings("ConstantConditions")
-  public Single<User> createUser(@NonNull GoogleSignInAccount account) {
-    return Single.fromCallable(() -> {
-      User user = new User();
-      user.setOauthKey(account.getId());
-      return user;
-    })
-        .flatMap((user) ->
-            userDao.insert(user)
-                .map((id) -> {
-                  if (id > 0) {
-                    user.setId(id);
-                  }
-                  return user;
-                })
+  public Single<User> getOrCreate(@NonNull GoogleSignInAccount account) {
+    return userDao.findByOauthKey(account.getId())
+        .switchIfEmpty(
+            Single.fromCallable(() -> {
+              User user = new User();
+              user.setOauthKey(account.getId());
+              userDao.insert(user)
+                  .doAfterSuccess(user::setId)
+                  .subscribe();
+              return user;
+            })
         )
         .subscribeOn(Schedulers.io());
   }
 
 
-  public Completable save(User user){
+  public Completable save(User user) {
     return ((user.getId() == 0)
         ? userDao.insert(user)
         .doAfterSuccess(user::setId)
@@ -62,7 +59,7 @@ public class UserRepository {
         .subscribeOn(Schedulers.io());
   }
 
-  public Completable delete (User user){
+  public Completable delete(User user) {
     return ((user.getId() == 0)
         ? Completable.complete()
         : userDao.delete(user)
@@ -70,7 +67,7 @@ public class UserRepository {
         .subscribeOn(Schedulers.io());
   }
 
-  public LiveData<User> get(long id){
+  public LiveData<User> get(long id) {
     return userDao.findByUserId(id);
   }
 }

@@ -4,10 +4,12 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.cardcombat.model.entity.UnitCard;
 import edu.cnm.deepdive.cardcombat.model.entity.User;
+import io.reactivex.Maybe;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -15,13 +17,13 @@ import java.util.List;
 @Dao
 public interface UserDao {
 
-  @Insert
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
   Single<Long> insert(User user);
 
-  @Insert
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
   Single<List<Long>> insert(User... users);
 
-  @Insert
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
   Single<List<Long>> insert(Collection<User> users);
 
   @Update
@@ -42,7 +44,10 @@ public interface UserDao {
   @Delete
   Single<Integer> delete(Collection<User> users);
 
-  @Query("SELECT * FROM User WHERE user_id = :id")
+  @Query("SELECT * FROM `User` WHERE user_id = :id")
   LiveData<User> findByUserId(long id);
+
+  @Query("SELECT * FROM `User` WHERE oauth_Key = :oauthKey")
+  Maybe<User> findByOauthKey(String oauthKey);
 
 }
