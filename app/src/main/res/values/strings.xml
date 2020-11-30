@@ -1,5 +1,10 @@
 <resources>
   <string name="app_name">Card Combat</string>
   <string name="login_failure_message">Unable to sign in with the provided credentials</string>
+  <string name="card_combat_main_screen_text">Card Combat Main Screen</string>
+  <string name="play_button">Play</string>
+  <string name="edit_create_decks_button">Edit/Create Decks</string>
+  <string name="scan_qr_codes_button">Scan Qr Codes</string>
+  <string name="logout_button">Logout</string>
 
 </resources>

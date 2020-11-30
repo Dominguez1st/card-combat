@@ -2,16 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:background="@color/backgroundColor"
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Battle Options Screen"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"/>
+    app:layout_constraintEnd_toEndOf="parent"
+    android:text="Battle Options Screen"/>
 
   <Button
     android:id="@+id/nav_to_main_button"
@@ -24,6 +25,28 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     android:text="Return"/>
+
+  <Spinner
+    android:id="@+id/player_deck_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintVertical_bias="0.66"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:prompt="@string/app_name"
+    android:spinnerMode="dropdown"/>
+
+  <Spinner
+    android:id="@+id/computer_deck_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintVertical_bias="0.33"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
 
   <Button
     android:id="@+id/nav_to_battle_button"
