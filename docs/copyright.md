@@ -1,3 +1,5 @@
+# Copyrights & Licenses
+
 ## Card Combat
 
 v0.1.0 written by Robert Dominguez, with contributions by Nicholas Bennett and Todd Nordquist.
