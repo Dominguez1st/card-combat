@@ -1,6 +1,6 @@
-# Copyrights & Licenses
+## Copyrights & Licenses
 
-## Card Combat
+### Card Combat
 
 v0.1.0 written by Robert Dominguez, with contributions by Nicholas Bennett and Todd Nordquist.
 
@@ -16,7 +16,7 @@ distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIN
 implied. See the License for the specific language governing permissions and limitations under the 
 License.
 
-## Android standard libraries, support libraries, Material components, Google Play
+### Android standard libraries, support libraries, Material components, Google Play
 
 Copyright (C) 2007–present The Android Open Source Project
 
@@ -30,7 +30,7 @@ distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIN
 implied. See the License for the specific language governing permissions and limitations under the 
 License.
 
-## Stetho
+### Stetho
 
 MIT License
 

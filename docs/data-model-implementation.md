@@ -1,6 +1,6 @@
-# Data Model Implementation
+## Data Model Implementation
 
-## Entity Classes
+### Entity Classes
 
 * [AttackCard](https://github.com/Dominguez1st/card-combat/blob/master/app/src/main/java/edu/cnm/deepdive/cardcombat/model/entity/AttackCard.java)
 
@@ -12,7 +12,7 @@
 
 * [User](https://github.com/Dominguez1st/card-combat/blob/master/app/src/main/java/edu/cnm/deepdive/cardcombat/model/entity/User.java)
 
-## DAO Interfaces
+### DAO Interfaces
 
 * [AttackCard](https://github.com/Dominguez1st/card-combat/blob/master/app/src/main/java/edu/cnm/deepdive/cardcombat/model/dao/AttackCardDao.java)
 
@@ -24,11 +24,11 @@
 
 * [User](https://github.com/Dominguez1st/card-combat/blob/master/app/src/main/java/edu/cnm/deepdive/cardcombat/model/dao/UserDao.java)
 
-## Database Class
+### Database Class
 
 * [CardCombatDatabase](https://github.com/Dominguez1st/card-combat/blob/master/app/src/main/java/edu/cnm/deepdive/cardcombat/service/CardCombatDatabase.java)
 
-## Repository Classes
+### Repository Classes
 
 * [DeckRepository](https://github.com/Dominguez1st/card-combat/blob/master/app/src/main/java/edu/cnm/deepdive/cardcombat/service/DeckRepository.java)
 

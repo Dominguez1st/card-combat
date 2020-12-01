@@ -1,4 +1,4 @@
-# Summary
+## Summary
 
 _Project Card Combat_ is a turn based card game that pits the user against a Computer AI that can be 
 played on your Android devices. _Project Card Combat_ lets the user create decks to beat the AI and 
@@ -20,7 +20,7 @@ and save them for future use. The camera of the Android device will be necessary
 scanner portion of the app although if the then current user's device is lacking a camera then such
 functionality will be missing though the rest of the application will still work.
 
-# Intended users
+## Intended users
 
 * People who would like to pass some time with a quick simple game.
 
@@ -34,7 +34,8 @@ functionality will be missing though the rest of the application will still work
     challenges that come with the app and after beating those the ability to play and create user 
     created challenges, so that my friends and I can continue having fun with each other.
 
-# Current State of the Application
+## Current State of the Application
+
 * Current State
     
     * Camera functionality has not been implemented yet.
@@ -54,7 +55,7 @@ functionality will be missing though the rest of the application will still work
     
     * The ability to share decks with other users over bluetooth.
 
-# Functionality
+## Functionality
 
 * Create custom-made decks.
 	* The user chooses 3 units cards out of 7 and then chooses 5 attackType cards for each unit for 
@@ -94,7 +95,7 @@ functionality will be missing though the rest of the application will still work
 
 * Scan QR codes to receive custom-made decks or challenge quests.
     
-# Build instructions
+## Build instructions
 
 1. Go to the _[Card Combat Project Github](https://github.com/Dominguez1st/card-combat)_
 
@@ -111,18 +112,18 @@ icon or clicking _Build Project_ in the _Build_ Menu.
 6. Once the IDE has finished building the project, click the green arrow button or click the _'Run 
 Card Combat.app'_ button in the _Run_ menu.
 
-# [User Instructions](user-instructions.md)
+## [User Instructions](user-instructions.md)
    
-# [Technical Requirements and Dependencies](technical-requirements-dependencies.md)   
+## [Technical Requirements and Dependencies](technical-requirements-dependencies.md)   
     
-# [Wireframe](wireframe.md)
+## [Wireframe](wireframe.md)
 
-# [Entity-Relationship Diagram](erd.md)
+## [Entity-Relationship Diagram](erd.md)
 
-# [Data Definition Language (DDL)](ddl.md)
+## [Data Definition Language (DDL)](ddl.md)
 
-# [Data Model Implementation](data-model-implementation.md)
+## [Data Model Implementation](data-model-implementation.md)
 
-# [External or Device-Based Services]()
+## [External or Device-Based Services]()
 
-# [Copyright & License Information](copyright.md)
+## [Copyright & License Information](copyright.md)

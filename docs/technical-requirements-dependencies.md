@@ -1,24 +1,24 @@
-# Technical Requirements and Dependencies
+## Technical Requirements and Dependencies
 
-## Android API Versions/Hardware Tested On
+### Android API Versions/Hardware Tested On
 
 * Samsung SM-G950U
 
 * Pixel 3a API 28 (emulator)
 
-## Minimum Android API Required
+### Minimum Android API Required
 
 * 24 (Nougat)
 
-## Target Android API
+### Target Android API
 
 * 29 (Android10)
 
-## Other Restrictions
+### Other Restrictions
 
 * The application is currently available only in American English.
 
-## Third-Party Libraries
+### Third-Party Libraries
 
 * Google Sign In
 
@@ -28,11 +28,11 @@
 
 * JUnit
 
-## Permissions Required
+### Permissions Required
 
 * None
 
-## External Services Consumed
+### External Services Consumed
 
 * Google Sign In
 

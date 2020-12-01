@@ -1,4 +1,4 @@
-# User Instructions
+## User Instructions
 
 * Upon starting the app the user will be brought to the _Login_ Screen at which point they will have 
 to login in using a _Google Account_.  

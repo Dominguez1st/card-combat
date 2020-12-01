@@ -1,6 +1,6 @@
-# Device/external services
+## Device/external services
 
-## Device Services
+### Device Services
 
 * Device's Camera.
 
@@ -12,7 +12,7 @@
     * The camera is not critical to the main functionality of the application and without it only the 
     qr code scanning portion of the app will not work.
 
-## External services
+### External services
 
 * QRCode Scanner
 
