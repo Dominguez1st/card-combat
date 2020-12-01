@@ -93,13 +93,6 @@ functionality will be missing though the rest of the application will still work
 * Create QR codes for custom-made decks or challenge quests.
 
 * Scan QR codes to receive custom-made decks or challenge quests.
-
-## Persistent data
-* User created decks.
-
-* User created AI Computer settings.
-
-* Information about which challenges the user has completed.
     
 ## Build instructions
 
