@@ -36,8 +36,4 @@
 
 * [UserRepository](https://github.com/Dominguez1st/card-combat/blob/master/app/src/main/java/edu/cnm/deepdive/cardcombat/service/UserRepository.java)
 
-## Data Definition Language (DDL)
-
-* [DDL](ddl.md)
-
 [*Return to previous page*](index.md)

@@ -101,28 +101,15 @@ functionality will be missing though the rest of the application will still work
 
 * Information about which challenges the user has completed.
     
-## Device/external services
-
-### Device Services
-
-* Camera.
-
-### External services
-
-* [QRCode Scanner](https://developers.google.com/ml-kit/vision/barcode-scanning/android)
-	* A library that will allow the camera to read QRCodes.
-     
-        * The app will be able to run without QRCode Scanner but will lose the QR code functionality.
-
 ## Build instructions
 
 1. Go to the _[Card Combat Project Github](https://github.com/Dominguez1st/card-combat)_
 
-2. Click on the green _Code_ button and then click on the clipboard icon to copy the link.
+2. With SSH selected, click on the green _Code_ button and then click on the clipboard icon to copy 
+the link.
 
-3. Turn on either _IntelliJ IDEA_ or _Android Studio_.
-
-4. Select new project from version control and then paste the copied link into URL field and click 
+3. Turn on either _IntelliJ IDEA_ or _Android Studio_ and select new project from version control 
+and then paste the copied link into URL field and click 
 _Clone_.
 
 5. Once the IDE has finished downloading everything, run the project by clicking the green hammer 
@@ -139,17 +126,52 @@ to login in using a _Google Account_.
 * After logging in the user will automatically be taken to the _Main Menu Screen_ which will then 
 allow the user to press one of four buttons to navigate the application.
 
-* Should the user press the _Logout_ Button then the user will be logged out of their _Google Account_
+* Should the user press the _LOGOUT_ Button then the user will be logged out of their _Google Account_
 and be taken to the _Login_ Screen.
 
-## Wireframe
+* If the user presses the _SCAN QR CODE_ then the user will be taken to qr code scanner screen.
 
-* [Project Card Combat Wireframe](wireframe.md)
+    * From the qr code scanner screen the user will be able to use the current device's camera to 
+    scan a qr code to receive a code that can be used to create a deck.
+    
+    * The user can press the _RETURN_ button to go back to the main menu screen.
+    
+* If the user presses the _EDIT/CREATE DECK_ then the user will be taken to the deck editor screen.
 
-## Entity-Relationship Diagram
+    * From the deck editor screen the user can edit their currently saved decks or create new decks 
+    to play with.
+    
+    * The _SAVE DECK_ button will allow the user to save the currently selected deck.
+    
+    * The _GENERATE QR CODE_ button will allow the user to generate a qr code that will be saved 
+    to the user's clipboard or allow them into a code to create a deck.
+    
+    * The user can press the _RETURN_ button to go back to the main menu screen.
 
-* [Project Card Combat Entity-Relationship Diagram](erd.md)
+* If the user presses the _PLAY_ then the user will be taken to the battle options screen.
 
-## Data Model Implementation
+    * On the battle options screen the user can choose which deck the user will be playing and which
+    deck the computer will be playing.
+    
+    * The user can press the _RETURN_ button to go back to the main menu screen.
+    
+    * Pressing the _PLAY_ button will take the user to battle screen
+    
+        * Once the user has reached the battle screen the game will begin as described in the 
+        functionality section.
+        
+        * Once the game has ended the user will be taken back to the battle options screen.
+   
+## [Technical Requirements and Dependencies](technical-requirements-dependencies.md)   
+    
+## [Wireframe](wireframe.md)
 
-* [Project Card Combat Data Model Implementation](data-model-implementation.md)
+## [Entity-Relationship Diagram](erd.md)
+
+## [Data Definition Language (DDL)](ddl.md)
+
+## [Data Model Implementation](data-model-implementation.md)
+
+## [External or Device-Based Services]()
+
+## [Copyright & License Information](copyright.md)
