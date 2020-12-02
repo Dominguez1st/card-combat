@@ -49,7 +49,7 @@ public interface AttackCardDao {
    * @return A {@code Single} holding the number of updates performed.
    */
   @Update
-  Single<Integer> updates(AttackCard attackCard);
+  Single<Integer> update(AttackCard attackCard);
 
   /**
    * Updates multiple attack cards in the database.
