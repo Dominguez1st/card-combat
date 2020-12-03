@@ -12,6 +12,9 @@ import androidx.navigation.Navigation;
 import edu.cnm.deepdive.cardcombat.R;
 import edu.cnm.deepdive.cardcombat.databinding.FragmentDeckEditorBinding;
 
+/**
+ * The deck editor fragment is where the user will be able to create and edit their decks.
+ */
 public class DeckEditorFragment extends Fragment {
 
   private FragmentDeckEditorBinding binding;

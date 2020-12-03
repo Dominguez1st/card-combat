@@ -9,6 +9,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import edu.cnm.deepdive.cardcombat.databinding.FragmentBattleBinding;
 
+/**
+ * The battle option fragment is where the user will play with their deck against the computer's deck.
+ */
 public class BattleFragment extends Fragment {
 
   private FragmentBattleBinding binding;
@@ -28,6 +31,14 @@ public class BattleFragment extends Fragment {
     // Do whatever is necessary with args.
   }
 
+  /**
+   * Initializes display text and navigation.
+   *
+   * @param inflater A {@code LayoutInflater}.
+   * @param container A {@code ViewGroup}.
+   * @param savedInstanceState A {@code Bundle}.
+   * @return A {@code View}.
+   */
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater,

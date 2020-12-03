@@ -12,6 +12,9 @@ import androidx.navigation.Navigation;
 import edu.cnm.deepdive.cardcombat.R;
 import edu.cnm.deepdive.cardcombat.databinding.FragmentQrCodeBinding;
 
+/**
+ * The qr code fragment is the that will allow the user to scan qr codes using the device's camera.
+ */
 public class QrCodeFragment extends Fragment {
 
   private FragmentQrCodeBinding binding;
@@ -31,6 +34,14 @@ public class QrCodeFragment extends Fragment {
     // Do whatever is necessary with args.
   }
 
+  /**
+   * Initializes display text and navigation.
+   *
+   * @param inflater A {@code LayoutInflater}.
+   * @param container A {@code ViewGroup}.
+   * @param savedInstanceState A {@code Bundle}.
+   * @return A {@code View}.
+   */
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater,

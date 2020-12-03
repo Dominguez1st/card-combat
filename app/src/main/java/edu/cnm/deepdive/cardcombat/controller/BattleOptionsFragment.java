@@ -12,6 +12,10 @@ import androidx.navigation.Navigation;
 import edu.cnm.deepdive.cardcombat.R;
 import edu.cnm.deepdive.cardcombat.databinding.FragmentBattleOptionsBinding;
 
+/**
+ * The battle options fragment contains where the user will choose which deck the user will play
+ * the computer with and which deck the computer will play with.
+ */
 public class BattleOptionsFragment extends Fragment {
 
   private FragmentBattleOptionsBinding binding;
@@ -31,6 +35,14 @@ public class BattleOptionsFragment extends Fragment {
     // Do whatever is necessary with args.
   }
 
+  /**
+   * Initializes display text and navigation.
+   *
+   * @param inflater A {@code LayoutInflater}.
+   * @param container A {@code ViewGroup}.
+   * @param savedInstanceState A {@code Bundle}.
+   * @return A {@code View}.
+   */
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater,

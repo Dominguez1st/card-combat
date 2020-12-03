@@ -15,6 +15,10 @@ import edu.cnm.deepdive.cardcombat.R;
 import edu.cnm.deepdive.cardcombat.databinding.FragmentMainScreenBinding;
 import edu.cnm.deepdive.cardcombat.service.GoogleSignInService;
 
+/**
+ * The main screen fragment is the main navigation hub, and allows the user to go to battle options,
+ * qr code, deck editor, or logout.
+ */
 public class MainScreenFragment extends Fragment {
 
   private FragmentMainScreenBinding binding;
@@ -36,6 +40,14 @@ public class MainScreenFragment extends Fragment {
     // Do whatever is necessary with args.
   }
 
+  /**
+   * Initializes display text and navigation.
+   *
+   * @param inflater A {@code LayoutInflater}.
+   * @param container A {@code ViewGroup}.
+   * @param savedInstanceState A {@code Bundle}.
+   * @return A {@code View}.
+   */
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater,
