@@ -1,0 +1,8 @@
+edu.cnm.deepdive.cardcombat
+edu.cnm.deepdive.cardcombat.controller
+edu.cnm.deepdive.cardcombat.databinding
+edu.cnm.deepdive.cardcombat.model.dao
+edu.cnm.deepdive.cardcombat.model.entity
+edu.cnm.deepdive.cardcombat.model.type
+edu.cnm.deepdive.cardcombat.service
+edu.cnm.deepdive.cardcombat.viewmodel
