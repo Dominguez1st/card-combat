@@ -114,7 +114,9 @@ Card Combat.app'_ button in the _Run_ menu.
 
 ## [User Instructions](user-instructions.md)
    
-## [Technical Requirements and Dependencies](technical-requirements-dependencies.md)   
+## [Technical Requirements and Dependencies](technical-requirements-dependencies.md) 
+
+## [Javadoc-Generated Technical Documentation](api/index.html)  
     
 ## [Wireframe](wireframe.md)
 
