@@ -26,11 +26,13 @@
 
 * Room
 
-* JUnit
+* JUnit 5
+
+* Stetho
 
 ### Permissions Required
 
-* None
+* Internet
 
 ### External Services Consumed
 

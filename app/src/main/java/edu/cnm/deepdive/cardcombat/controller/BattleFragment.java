@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import edu.cnm.deepdive.cardcombat.databinding.FragmentBattleBinding;
+import edu.cnm.deepdive.cardcombat.service.GoogleSignInService;
 
 /**
  * The battle option fragment is where the user will play with their deck against the computer's deck.
@@ -45,6 +46,7 @@ public class BattleFragment extends Fragment {
       @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
     binding = FragmentBattleBinding.inflate(inflater);
     // Access references in binding to set contents of view objects, as appropriate
+    binding.testName.setText(GoogleSignInService.getInstance().getAccount().getDisplayName());
     return binding.getRoot();
   }
 

@@ -37,11 +37,20 @@ functionality will be missing though the rest of the application will still work
 ## Current State of the Application
 
 * Current State
+
+    * All screens are set up with custom, button based navigation. 
+
+    * The application uses Google Sign In as an external service.
+    
+    * Data from the application is being stored in a SQLite database.
+         
+* Current Issues
     
     * Camera functionality has not been implemented yet.
     
     * Game logic has not been implemented yet.
     
+    * Qr code generation has not been implemented yet.
     
 * Possible Aesthetic/Cosmetic Enhancements
 
