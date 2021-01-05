@@ -56,4 +56,8 @@ public class BattleFragment extends Fragment {
     // Get reference to a ViewModel instance, set observers on LiveData.
   }
 
+  /**
+   * This is where I'm gonna put my test code.
+   */
+
 }
